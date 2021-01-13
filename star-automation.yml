@@ -39,9 +39,9 @@ projects:
       host:
         - name: spritle-soft.in
     - name: Django
-      platform: alpine:latest
+      platform: ubuntu:18.04
       commands:
-        - apk update --no-cache && apk upgrade && apk add git python3 python3-dev gcc musl-dev libc-dev mysql-client mysql-dev py3-pip  make automake autoconf
+        - apt-get update && apt-get install -y language-pack-en language-pack-en-base git libmysqlclient-dev python3 python3-pip build-essential libssl-dev libffi-dev python-dev g++ && apt-get clean
         - CHECKOUT
         - cd django && pip3 install -r requirements
       to-start:
