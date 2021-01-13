@@ -21,7 +21,7 @@ projects:
         - apk update && apk add git
         - CHECKOUT
         - cd web-ui && npm install
-        - cd web-ui && node --max_old_space_size=8192 node_modules/@angular/cli/bin/ng build --configuration dev && mv dist /tmp
+        - cd web-ui && node --max_old_space_size=8192 node_modules/@angular/cli/bin/ng build  && mv dist /tmp
         - cd conf && mv vhost.conf /tmp/vhost.conf
       platform: alpine:latest
       commands:
@@ -34,7 +34,7 @@ projects:
       to-start:
         - httpd -D FOREGROUND
       service:
-        - name: alserv-angular-dev
+        - name: spritle-angular-dev
           port: 80
       host:
         - name: spritle-soft.in
@@ -47,7 +47,7 @@ projects:
       to-start:
         - cd django && python3 manage.py runserver 0.0.0.0:8000
       service:
-        - name: alserv-django-dev
+        - name: spritle-django-dev
           port: 8000
       host:
         - name: spritle-softbck.in

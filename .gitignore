@@ -46,7 +46,6 @@ Thumbs.db
 # */**/migrations
 */**/*.pyc
 */spritle_env
-django/star-automation.yml
 django/media
 django/supervisor/*
 django/.vscode
