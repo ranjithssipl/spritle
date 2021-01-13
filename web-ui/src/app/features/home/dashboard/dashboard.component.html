@@ -1,0 +1,72 @@
+<!-- <div *ngIf="show" class="wrapper panel-bg">
+
+    <div class="content-wrapper">
+
+        <div class="panel-padding">
+            <div class="panel-title">
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-12">
+                    <div class="form-group">
+                        <div class="form-horizontal" [formGroup]="classesForm">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label required">Select Classes</label>
+                                <div class="col-sm-5">
+                                    <ng-select [items]="classes" [multiple]="true" formControlName="classes" (selected)="selectedClasses($event)" placeholder="Select Classes">
+                                    </ng-select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="col-sm-8">
+                                    <div class="pull-right">
+                                        <button type="button"  class="btn btn-primary" (click)="submitData()">
+                                            Submit 
+                                        </button>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+<div class="content-heading">Classes
+    <small>ML identification based on Classes</small>
+ </div>
+ <!-- START panel-->
+ <div *ngIf="show" class="panel panel-default">
+    <div class="panel-heading">Inline form</div>
+    <div class="panel-body">
+       <form cclass="form-horizontal" role="form" [formGroup]="classesForm">
+          <div class="form-group">
+             <label class="col-sm-3 control-label required" >Select Classes</label>
+             <div class="col-sm-5">
+             <ng-select [items]="classes" [multiple]="true" formControlName="classes" (selected)="selectedClasses($event)" placeholder="Select Classes">
+            </ng-select>
+        </div>
+          </div>
+
+       </form>
+
+       <div class="row" >
+        <div class="col-md-12" style="margin-top: 10px;">
+            <div class="text-center">
+                <button type="button"  class="btn btn-primary" (click)="submitData()">
+                    Submit 
+                </button>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+ </div>
