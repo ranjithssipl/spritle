@@ -39,7 +39,7 @@ projects:
       host:
         - name: spritle-soft.in
     - name: Django
-      platform: ubuntu:18.04
+      platform: ubuntu:16.04
       commands:
         - apt-get update && apt-get install -y language-pack-en language-pack-en-base git libmysqlclient-dev python3 python3-pip build-essential libssl-dev libffi-dev python-dev g++ && apt-get clean
         - pip3 install --upgrade pip
