@@ -1,4 +1,4 @@
-const baseUrl = "http://34.73.77.76/";
+const baseUrl = "http://34.73.77.76:8000/";
 
 export const appDetails = {
     name: 'DEV-OPS',
