@@ -39,7 +39,8 @@ class UserViewset(viewsets.ModelViewSet):
 
     @action(methods=['get'], detail=False, url_path="get-classes")
     def get_classes(self, request):
-        with open("/home/ranjithkumar/projects/spritle_soft/spritle/django/users/coco.names", 'r') as f:
+        path = BASE_DIR + '/users/coco.names'
+        with open(path, 'r') as f:
             classes = [w.strip() for w in f.readlines()]
 
         return Response({"data": classes})
